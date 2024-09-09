@@ -9,7 +9,7 @@ reddit = praw.Reddit(
     password='Baracoa.1982!'
 )
 
-def buscar_temas_en_reddit(tema, limite=5):
+def buscar_temas_en_reddit(tema, limite=500):
     resultados = []
     for resultado in reddit.subreddit('all').search(tema, limit=limite):
         contenido = resultado.selftext if resultado.selftext else "No hay contenido."
